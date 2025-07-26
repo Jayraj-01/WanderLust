@@ -104,10 +104,7 @@ app.use((req,res,next)=>{
 
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
+app.use("/",userRouter);
 
 // Middleware
 app.use((err, req, res, next) => {
